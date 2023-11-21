@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.homework11.databinding.ActivityMainBinding
-import java.util.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupAnimals()
 
-        //binding.animalRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.animalRecyclerView.layoutManager = GridLayoutManager(this,3)
         binding.animalRecyclerView.adapter = AnimalRecyclerViewAdapter(animals = searchList)
 
